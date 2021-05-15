@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 426989891}
   m_Layer: 0
   m_Name: BombaR
-  m_TagString: Untagged
+  m_TagString: bola
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3af0f40f5055540a83e597a63fa7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombaFX: {fileID: 0}
+  bombaFX: {fileID: 3965806099300587853, guid: 228ebfec2fc9ba1489a37cc02e4d7f25, type: 3}
 --- !u!1 &540708847
 GameObject:
   m_ObjectHideFlags: 0
