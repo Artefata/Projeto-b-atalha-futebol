@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: ddc83a080e97d9a4f932c1f6fc2f6a20
+  - enabled: 1
+    path: Assets/Scenes/Leves_Games.unity
+    guid: 8af4b29fca26c9d4ba3ebaeef9fece72
+  - enabled: 1
+    path: Assets/Scenes/LOJA_BOLAS.unity
+    guid: 37e99fce7ce328648a18f378b7b9f47f
   m_configObjects: {}
