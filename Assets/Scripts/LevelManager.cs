@@ -12,6 +12,7 @@ public class LevelManager  : MonoBehaviour
         public string levelText;
         public bool habilitado;
         public int desbloqueado;
+        public bool txtAtivo;
     }
     public GameObject botao;
     public Transform localBtn;
@@ -29,11 +30,12 @@ public class LevelManager  : MonoBehaviour
             {
                 level.desbloqueado = 1;
                 level.habilitado = true;
+                level.txtAtivo = true;
             }
 
             btnNew.desbloqueadoBTN = level.desbloqueado;
             btnNew. GetComponent<Button> () .interactable = level .habilitado;
-
+            btnNew. GetComponentInChildren<Text>() .enabled = level.txtAtivo;
             btnNew.GetComponent<Button>().onClick.AddListener(() => ClickLevel("Level" + btnNew.levelTxtBTN.text));
 
             btnNovo.transform.SetParent (localBtn, false);

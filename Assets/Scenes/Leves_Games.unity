@@ -944,21 +944,27 @@ MonoBehaviour:
   - levelText: 1
     habilitado: 1
     desbloqueado: 0
+    txtAtivo: 1
   - levelText: 2
     habilitado: 0
     desbloqueado: 0
+    txtAtivo: 0
   - levelText: 3
     habilitado: 0
     desbloqueado: 0
+    txtAtivo: 0
   - levelText: 4
     habilitado: 0
     desbloqueado: 0
+    txtAtivo: 0
   - levelText: 5
     habilitado: 0
     desbloqueado: 0
+    txtAtivo: 0
   - levelText: 6
     habilitado: 0
     desbloqueado: 0
+    txtAtivo: 0
 --- !u!1 &1947726165
 GameObject:
   m_ObjectHideFlags: 0
