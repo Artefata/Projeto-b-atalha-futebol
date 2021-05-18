@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e36a30a53c0a148aa62dc6c11f7c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pontosUI: {fileID: 0}
+  pontosUI: {fileID: 1212823167}
 --- !u!4 &1150792898
 Transform:
   m_ObjectHideFlags: 0
