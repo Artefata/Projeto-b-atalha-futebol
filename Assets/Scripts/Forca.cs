@@ -43,12 +43,12 @@ public class Forca : MonoBehaviour
             
             if(moveX  < 0)
             {
-                seta2Imag.fillAmount += 1 * Time.deltaTime;
+                seta2Imag.fillAmount += 0.8f * Time.deltaTime;
                 force = seta2Imag.fillAmount * 1000;
             }
             if(moveX  > 0)
             {
-                seta2Imag.fillAmount -= 1 * Time.deltaTime;
+                seta2Imag.fillAmount -= 0.8f * Time.deltaTime;
                 force = seta2Imag.fillAmount * 1000;
             }
         }
