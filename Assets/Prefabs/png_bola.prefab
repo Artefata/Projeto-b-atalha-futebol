@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4000913613946958432}
   - component: {fileID: 4000913613946958433}
   - component: {fileID: 4000913613946958434}
-  - component: {fileID: 1250282295376636145}
-  - component: {fileID: 548830863}
+  - component: {fileID: 6528389817737011312}
+  - component: {fileID: 1237788219}
   m_Layer: 0
   m_Name: png_bola
   m_TagString: bola
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4000913613946958435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.5, y: -0.76, z: 0}
-  m_LocalScale: {x: 0.08656241, y: 0.08212759, z: 0.20403121}
+  m_LocalScale: {x: 0.1189281, y: 0.11809126, z: 0.20403121}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 54d6886c5a60fd640aea4225eef9080f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,7 +110,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4000913613946958435}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -123,7 +123,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1250282295376636145
+--- !u!95 &6528389817737011312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000913613946958435}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c48cbf90bcfa1d4f955f725615a1209, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1237788219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,25 +151,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4000913613946958435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bebd9f8a402c58c41927443d4a8640cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 01994d7819e21a248b9e00bf85cbc67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   posStart: {fileID: 0}
-  setaImag: {fileID: 0}
   setaGO: {fileID: 0}
   zRotate: 0
   liberaRot: 0
   libereTiro: 0
---- !u!114 &548830863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4000913613946958435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f578e167aacb104c93cb91f0b332d97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   seta2Imag: {fileID: 0}
