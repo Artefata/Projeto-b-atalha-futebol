@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -9,10 +10,12 @@ public class GameManager : MonoBehaviour
     //bola
     [SerializeField]
     private GameObject bola;
-    private int bolasNun = 2;
+    public int bolasNum = 3;
     private bool bolaMorreu = false;
-    private int bolasEmCena = 0;
-    private Transform pos;
+    public int bolasEmCena = 0;
+    public Transform pos;
+
+    public int tiro = 0;
 
     void Awake()
     {
@@ -27,11 +30,13 @@ public class GameManager : MonoBehaviour
         }
         SceneManager.sceneLoaded += Carrega;
     }
+    
     void Carrega(Scene cena,LoadSceneMode modo)
     {
         pos = GameObject.Find("posStart").GetComponent<Transform>();
     }
-    void Star ()
+
+    void Start ()
     {
         ScoreManager.instance.GameStartScoreM ();
     }
@@ -43,17 +48,32 @@ public class GameManager : MonoBehaviour
     {
         ScoreManager.instance.UpdateScore ();
         UIManager.instance.UpdateUI ();
+        
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            SceneManager.LoadScene ("Level2");
+        }
 
         NascBolas();
+        if (bolasNum <=0)
+        {
+            GameOver();
+        }
     }
 //responsável pelo  nascbola
-void NascBolas()
-{
-    if(bolasNun > 0 && bolasEmCena == 0)
+    void NascBolas()
     {
-        Instantiate (bola, new Vector2(pos.position.x,pos.position.y), Quaternion.identity);
-        bolasEmCena += 1;
+        if(bolasNum > 0 && bolasEmCena == 0)
+        {
+            Instantiate (bola, new Vector2(pos.position.x,pos.position.y), Quaternion.identity);
+            bolasEmCena += 1;
+            tiro = 0;
+        }
     }
-}
+
+    void GameOver()
+    {
+        UIManager.instance.GameOverUI();
+    }
 
 }

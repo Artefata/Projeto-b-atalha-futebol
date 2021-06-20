@@ -5,108 +5,103 @@ using UnityEngine.UI;
 
 public class Rotacao : MonoBehaviour
 {
-    //Posição Seta
-    [SerializeField]private Transform posStart;
-    //seta
-    [SerializeField]
-    private Image setaImag;
+    //Posição seta
+    [SerializeField] private Transform posStart;
+    //Seta
+    public Image setaImg;
     public GameObject setaGO;
     //Ang
     public float zRotate;
     public bool liberaRot = false;
-    public bool libereTiro = false;
+    public bool liberaTiro = false;
+
     
-    // Start is called before the first frame update
     void Start()
     {
-        
+         posStart = GameObject.Find ("posStart").GetComponent<Transform>();
+        setaImg = GameObject.Find ("Seta").GetComponent<Image>();
+        setaGO = GameObject.Find ("Seta");
+
         PosicionaBola();
+
     }
 
-    // Update is called once per frame
     void Update()
     {
+        PosicionaSeta();
         RotacaoSeta();
         InputDeRotacao();
         LimitaRotacao();
-        PosicionaSeta();
-
+    
     }
-    void PosicionaSeta()//posicao da seta
+    void PosicionaSeta() //Posição seta
     {
-        setaImag.rectTransform.position = transform.position;
+        setaImg.rectTransform.position = transform.position;
     }
-    void PosicionaBola () //posicao da bola
+    void PosicionaBola() //Posição Bola
     {
-        this.gameObject.transform.position=posStart.position;
+        this.gameObject.transform.position = posStart.position;
     }
-    void RotacaoSeta()
+    void RotacaoSeta() //angulaçao
     {
-        setaImag.rectTransform.eulerAngles = new Vector3(0,0,zRotate);
+         setaImg.rectTransform.eulerAngles = new Vector3(0,0,zRotate);
     }
-
-    void InputDeRotacao() // controle de teclado
-    {/*
-        if (Input.GetKey(KeyCode.UpArrow))
+    void InputDeRotacao()
+    {
+      /*  if(Input.GetKey(KeyCode.UpArrow)) //seta para cima
         {
             zRotate += 2.5f;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.DownArrow))//seta para baixo
         {
             zRotate -= 2.5f;
-        }
-        */
-
-        if(liberaRot == true)
+        }*/
+        if(liberaRot == true) //movemetçao do mose
         {
+            
             float moveY = Input.GetAxis ("Mouse Y");
 
-             if(zRotate < 90)
+            if(zRotate < 90)
+            {
+                if(moveY > 0)
+                 {
+                    zRotate += 2.5f;
+                }
+            }
+
+            if(zRotate > 0)
+            {
+              if(moveY < 0)
              {
-                 if(moveY > 0)
-                 { 
-                 zRotate += 2.5f;
-
-                 }
+                zRotate -= 2.5f;
              }
-             if(zRotate > 0)
-             {
-                  if(moveY < 0)
-                 { 
-                 zRotate -= 2.5f;
-
-                 }
-
-             }
-            
+            }
+           
 
         }
-
     }
-    void LimitaRotacao()
+    void LimitaRotacao() //limita a rotação
     {
         if(zRotate >= 90)
         {
-            zRotate = 90;
+            zRotate =90;
         }
-        if(zRotate <= 0)
+        if(zRotate <=0)
         {
             zRotate = 0;
         }
     }
 
-    //força com mouse
     void OnMouseDown()
     {
         liberaRot = true;
-        setaGO.SetActive (true);
+        setaGO.SetActive(true);//ativa seta
     }
 
     void OnMouseUp()
     {
         liberaRot = false;
-        libereTiro =true;
-        setaGO.SetActive (false);
-        AudioManager.instance.SonsFXToca(1);
-    }
+        liberaTiro = true;
+        setaGO.SetActive(false);//desativa seta
+        AudioManager.instance.SonsFXToca (1);    }
 }
