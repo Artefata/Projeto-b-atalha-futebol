@@ -495,6 +495,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4673920369824565450, guid: 517edff359329844da404beb3ea2c8d5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.3772025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673920369824565450, guid: 517edff359329844da404beb3ea2c8d5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 7.239826
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673920369824565450, guid: 517edff359329844da404beb3ea2c8d5,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.031399336
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673920369824565450, guid: 517edff359329844da404beb3ea2c8d5,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6400866
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673920369824565450, guid: 517edff359329844da404beb3ea2c8d5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 517edff359329844da404beb3ea2c8d5, type: 3}
 --- !u!1 &347487425
@@ -2051,6 +2076,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 466505797077136199, guid: 96880500c3247ee4baccdf048cbe16dd,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 952416857784523708, guid: 96880500c3247ee4baccdf048cbe16dd,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -2229,7 +2259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   losePainel: {fileID: 1608516570}
   pausePainel: {fileID: 0}
-  pauseBtn: {fileID: 0}
+  pauseBtn: {fileID: 347487427}
 --- !u!4 &1150792898
 Transform:
   m_ObjectHideFlags: 0
@@ -2551,7 +2581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 3825349483360080062, guid: d62daabc23c6199429bee06446b03a7f, type: 3}
-  bolasNum: 3
+  bolasNum: 1
   bolasEmCena: 0
   pos: {fileID: 0}
   tiro: 0
